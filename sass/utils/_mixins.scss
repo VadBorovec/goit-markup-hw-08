@@ -1,0 +1,40 @@
+// Міксін 
+
+@mixin fontset($fw: 700, $fs: 16px, $lh: 1.17, $ls: 0.03em,
+        $align: start, $transform: none, $decoration: none) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+    text-align: $align;
+    text-transform: $transform;
+    text-decoration: $decoration;
+}
+
+@mixin displayflex ($type: flex, $justify-content: center, $align-items: center) {
+    display: $type;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin btn($width: 200px, $height: 50px,
+        $color: getColor('white-text'),
+        $background-color: getColor('accent'),
+        $margin: 0 auto, $padding: 10px 32px,
+        $box-shadow: $box-shadow) {
+    width: $width;
+    height: $height;
+    font-family: inherit;
+    @include fontset($lh: 1.88, $ls: 0.06em, $align: center);
+    color: $color;
+    background-color: $background-color;
+    margin: $margin;
+    padding: $padding;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    box-shadow: $box-shadow;
+    transition: color $timing-function,
+                background-color $timing-function,
+                box-shadow $timing-function;
+}

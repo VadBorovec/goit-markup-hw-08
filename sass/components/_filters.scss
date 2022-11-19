@@ -1,0 +1,26 @@
+/* Фільтри з Портфоліо */
+
+.filters {
+    @include displayflex();
+    gap: 8px;
+    margin-bottom: 50px;
+    
+    &__btn {
+        @include btn ( $height: 38px,
+            $width: inherit,
+            $color: getColor('title-text'),
+            $background-color: getColor('secondary-bcg'),
+            $padding: 6px 22px,
+            $box-shadow: none);
+        @include fontset ($fw:500, $lh: 1.63);
+
+        &:hover,
+        &:focus {
+            color: getColor('white-text');
+            background-color: getColor('accent');
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                        0px 1px 2px rgba(0, 0, 0, 0.08),
+                        0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+    }
+}

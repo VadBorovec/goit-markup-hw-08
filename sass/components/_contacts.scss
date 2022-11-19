@@ -1,0 +1,24 @@
+/* Контакти */
+
+.contacts {
+    @include displayflex();
+    gap: 50px;
+
+    &__icon {
+        fill: currentColor;
+        align-items: center;
+    }
+    
+    &__link {
+        @include displayflex();
+        gap: 10px;
+        @include fontset($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
+        color: inherit;
+        // transition: color $timing-function, background-color $timing-function;
+
+        &:hover,
+        &:focus {
+            color: getColor('accent');
+        }
+    }
+}

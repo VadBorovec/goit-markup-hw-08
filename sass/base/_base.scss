@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Тіло */
+
+body {
+    width: 100%;
+    background-color: getColor('primary-bcg');
+    color: getColor('primary-text');
+    font-family: "roboto", sans-serif;
+    @include fontset($fw: 400, $fs: 14px, $lh: 1.17, $ls: 0.03em, $align: start);
+}
+
+/* Глобальне скидання стилів */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Зображення */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Списки */
+
+ul {
+    list-style: none;
+}
+
+/* Лінки */
+
+a {
+    @include fontset($fw: 500, $lh: 1.14, $ls: 0.02em, $decoration: none);
+    font-style: normal;
+    color: getColor('title-text');
+    transition: color $timing-function, background-color $timing-function;
+            
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+    }
+}

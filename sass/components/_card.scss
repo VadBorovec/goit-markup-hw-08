@@ -1,0 +1,65 @@
+/* Картка з портфоліо */
+ 
+.card {
+    @include fontset($fw: 500, $fs: 16px, $lh: 1.14, $ls: 0.02em);
+    // color: getColor('title-text');
+    // transition: color $timing-function, background-color $timing-function;
+
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+    }
+
+    &:hover,
+    &:focus {
+        display: block;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &__wrap {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__overlay {
+        position: absolute;
+        @include displayflex();
+        top: 0;
+        left: 0;
+        padding: 0 24px;
+        width: 100%;
+        height: 100%;
+        background-color: getColor('accent');
+        opacity: 0.9;
+        transform: translateY(100%);
+        transition: transform $timing-function;
+        
+        .card:hover &,
+        .card:focus & {
+            transform: translateY(0);
+        }
+    }
+
+    &__caption {
+        @include fontset($fw: 400, $fs: 18px, $lh: 1.56);
+        color: getColor('white-text');
+    }
+
+    &__description {
+        padding: 20px 24px;
+        border: 1px solid #EEEEEE;
+        border-top: 0;
+    }
+
+    &__subtitle {
+        @include fontset($fw: 700, $fs: 18px, $lh: 2, $ls: 0.06em);
+        color: getColor('title-text');
+        margin: 0 auto 4px;
+    }
+
+    &__text {
+        @include fontset($fw: 400, $fs: 16px, $lh: 1.88);
+        color: getColor('primary-text');
+        margin: 0;
+    }
+}

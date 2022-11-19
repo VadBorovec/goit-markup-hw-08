@@ -1,0 +1,39 @@
+/* Навігація */
+
+.nav {
+    @include displayflex($justify-content: start);
+    flex-grow: 1;
+    gap: 93px;
+
+    &__list {
+        @include displayflex();
+        gap: 50px;
+    }
+
+    &__link {
+        position: relative;
+        @include fontset($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
+        color: getColor('title-text');
+        padding: 32px 0 32px;
+        // transition: color $timing-function,
+        // background-color $timing-function;
+
+        &:hover,
+        &:focus,
+        &--current {
+            color: getColor('accent');
+            outline: none;
+        }
+
+        &--current::after {
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: -1px;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: getColor('accent');
+        }
+    }
+}

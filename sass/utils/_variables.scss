@@ -1,0 +1,39 @@
+$colors: (
+    /* колір акценту (бренд) */
+    'accent': #2196F3,
+    /* основний колір тексту */
+    'primary-text': #757575,
+    /* другорядний колір тексту */
+    'title-text': #212121,
+    /* білий колір тексту */
+    'white-text': #FFFFFF,
+    /* чорний колір тексту */
+    'black-text': #000000,
+    /* основний колір фону */
+    'primary-bcg': #ffffff,
+    /* другорядний колір фону */
+    'secondary-bcg': #F5F4FA,
+    /* темний колір фону */
+    'dark-bcg': #2F303A,
+    /* колір іконок */
+    'icon-current': #AFB1B8,
+    /* колір адреси в підвалі */
+    'footer-address': rgba(255, 255, 255, 0.6),
+    /* ховер та фокус кнопки */
+    'btn-hover-bcg': #188CE8,
+    /* плейсхолдер в модальному*/
+    'modal-placeholder': rgba(117, 117, 117, 0.5),
+    /* плейсхолдер в футері*/
+    'subscription-placeholder': rgba(255, 255, 255, 0.6),
+    /* градієнт */
+    'gradient': linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+$timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// тінь
+$box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

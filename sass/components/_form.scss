@@ -1,0 +1,148 @@
+/*  *Форма модального вікна*  */
+
+.form {
+    @include displayflex($align-items: stretch);
+    flex-direction: column;
+
+    &__title {
+        @include fontset($fs: 20px, $lh: 1.15, $align: center);
+        color: getColor('title-text');
+        margin-bottom: 12px;
+    }
+
+    &__label {
+        display: block;
+        @include fontset($fw: 400, $fs: 12px, $lh: 1.15, $ls: 0.01em);
+        margin-bottom: 4px;
+    }
+
+    &__control {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px 12px 12px 42px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: none;
+        transition: border 250ms $timing-function;
+
+        &:hover,
+        &:focus {
+            border-color: getColor('accent');
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        fill: getColor('title-text');
+        transition: fill $timing-function;
+
+        .form__input:hover+&,
+        .form__input:focus+& {
+            fill: getColor('accent');
+            border-color: getColor('accent');
+        }
+    }
+
+    &__comment {
+        height: 120px;
+        width: 100%;
+        resize: none;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: none;
+        transition: border $timing-function;
+
+        &:hover,
+        &:focus {
+            fill: getColor('accent');
+            border-color: getColor('accent');
+        }
+
+        &::placeholder {
+            // margin: 0;
+            // padding: 0;
+            @include fontset($fw: 400, $fs: 12px, $ls: 00.01em);
+            color: getColor('modal-placeholder');
+        }
+    }
+
+    &__btn {
+        @include btn();
+    
+        &:hover,
+        &:focus {
+            background-color: getColor('btn-hover-bcg');
+        }
+    }
+
+}
+
+/* Чекбокс */
+
+.checkbox {
+    @include displayflex();
+    gap: 7px;
+    margin-bottom: 30px;
+
+    &__input {
+        position: absolute;
+        appearance: none;
+    }
+
+    &__icon {
+        border: 2px solid getColor('title-text');
+        border-radius: 2px;
+        transition: border $timing-function,
+                    background-color $timing-function;
+        fill: getColor('white-text');
+
+        .checkbox__input:checked+& {
+            background-color: getColor('accent');
+            border: none;
+        }
+    }
+
+    &__label {
+        @include displayflex();
+        gap: 7px;
+        @include fontset($fw: 400, $fs: 14px, $lh: 1.71);
+        color: getColor('primary-text');
+    }
+
+    &__link {
+        color: getColor('accent');
+        @include fontset ($fw: 400, $fs: 14px, $lh: 1.71, $decoration: underline);
+    }
+}
+
+/* .checkbox-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--dark-bcg-color);
+    border-radius: 2px;
+}
+
+.checkbox-label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--dark-bcg-color);
+    border-radius: 2px;
+    background-image: url(..);
+} */

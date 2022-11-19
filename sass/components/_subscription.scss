@@ -1,0 +1,42 @@
+/* Підвал блок - підписки */
+
+.subscription-form {
+    @include displayflex($align-items: stretch);
+    gap: 12px;
+
+    &__input {
+        padding: 15px;
+        width: 358px;
+        color: getColor('white-text');
+        background-color: getColor('dark-bcg');
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: $box-shadow;
+        border-radius: 4px;
+
+        &::placeholder {
+            @include fontset($fw: 400, $lh: 1.25);
+            color: getColor('subscription-placeholder');
+        }
+    
+        &:focus {
+            color: getColor('white-text');
+            border: 1px solid getColor('accent');
+            outline: none;
+        }
+    }
+
+    &__btn {
+        @include displayflex();
+        gap: 10px;
+        @include btn($padding: 0);
+
+        &:hover,
+        &:focus {
+            background-color: getColor('btn-hover-bcg');
+        }
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+}

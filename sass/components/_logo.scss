@@ -1,0 +1,20 @@
+/* Лого */
+
+.logo {
+    font-family: "raleway", sans-serif;
+    @include fontset($fs: 26px, $lh: 1.19);
+    color: getColor('accent');
+
+    &--primary {
+            color: getColor('black-text');
+        }
+
+    &--secondary {
+            color: getColor('white-text');
+        }
+    
+    &:hover,
+    &:focus {
+            color: getColor('accent');
+        }
+}

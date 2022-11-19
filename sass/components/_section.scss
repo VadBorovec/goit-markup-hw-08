@@ -1,0 +1,15 @@
+/* Секції */
+
+.section {
+    padding: 94px 0;
+
+    &--without-padding-top {
+        padding-top: 0;
+    }
+
+    &__title {
+        @include fontset($fs: 36px, $ls: 0.03em, $align: center);
+        color: getColor('title-text');
+        margin: 0 auto 50px;
+    }
+}

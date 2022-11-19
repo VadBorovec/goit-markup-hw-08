@@ -1,0 +1,36 @@
+/* Герой */
+
+.hero {
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    background-image: getColor('gradient'), url('../images/hero-bg-image.jpg');
+    background-color: getColor('dark-bcg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__container {
+        @include displayflex();
+        flex-direction: column;
+        padding: 200px 0;
+    }
+
+    &__title {
+        @include fontset($fw: 900,$fs: 44px, $lh: 1.36, $ls: 0.06em,
+                        $transform: uppercase, $align: center);
+        color: getColor('white-text');
+        max-width: 696px;
+        margin: 0 auto 30px;
+    }
+
+    &__btn {
+        @include btn($width: 216px, $padding: 0);
+        @include displayflex ();
+
+        &:hover,
+        &:focus {
+            background-color: getColor('btn-hover-bcg');
+        }
+    }
+}
