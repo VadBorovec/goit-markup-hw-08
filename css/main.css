@@ -338,6 +338,47 @@ a:hover, a:focus {
   margin: -1px;
 }
 
+/* Секції */
+.section {
+  padding: 94px 0;
+}
+.section--without-padding-top {
+  padding-top: 0;
+}
+.section__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  color: #212121;
+  margin: 0 auto 50px;
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 120px;
+  }
+}
+
 /* Підвал блок - адреса */
 .address__item:not(:last-child) {
   margin-bottom: 9px;
@@ -559,14 +600,6 @@ a:hover, a:focus {
   color: #2196F3;
 }
 
-/* Контейнер */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 /* Приклади робіт */
 .examples {
   display: flex;
@@ -580,46 +613,48 @@ a:hover, a:focus {
 }
 
 /* Секція Переваги */
-.features__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.features__list {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.features__item {
-  width: 270px;
-}
-.features__icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 270px;
-  height: 120px;
-  background-color: #F5F4FA;
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-.features__subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-align: start;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #212121;
-  margin: 0 auto 10px;
-}
-.features__text {
-  color: #757575;
-  line-height: 1.71;
-  margin: 0;
+@media screen and (min-width: 481px) {
+  .features__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .features__list {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .features__item {
+    width: 270px;
+  }
+  .features__icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  .features__subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: start;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #212121;
+    margin: 0 auto 10px;
+  }
+  .features__text {
+    color: #757575;
+    line-height: 1.71;
+    margin: 0;
+  }
 }
 
 /* Фільтри з Портфоліо */
@@ -1053,25 +1088,6 @@ a:hover, a:focus {
   height: 4px;
   border-radius: 2px;
   background-color: #2196F3;
-}
-
-/* Секції */
-.section {
-  padding: 94px 0;
-}
-.section--without-padding-top {
-  padding-top: 0;
-}
-.section__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-align: center;
-  text-transform: none;
-  text-decoration: none;
-  color: #212121;
-  margin: 0 auto 50px;
 }
 
 /* Соціальні мережі */

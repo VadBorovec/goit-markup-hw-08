@@ -1,8 +1,12 @@
 @import './utils/variables';
+@import './utils/breakpoints';
 @import './utils/mixins';
 @import './base/normalise';
 @import './base/base';
 @import './utils/visually-hidden';
+
+@import './components/section';
+@import './components/container';
 
 @import './components/address';
 @import './components/backdrop';
@@ -10,7 +14,6 @@
 @import './components/card';
 @import './components/clients';
 @import './components/contacts';
-@import './components/container';
 @import './components/examples';
 @import './components/features';
 @import './components/filters';
@@ -21,7 +24,6 @@
 @import './components/logo';
 @import './components/modal';
 @import './components/nav';
-@import './components/section';
 @import './components/socials';
 @import './components/solutions';
 @import './components/subscription';
