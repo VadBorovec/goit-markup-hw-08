@@ -379,7 +379,7 @@ a:hover, a:focus {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -577,10 +577,25 @@ a:hover, a:focus {
 
 /* Контакти */
 .contacts {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+  }
 }
 .contacts__icon {
   fill: currentColor;
@@ -929,8 +944,18 @@ a:hover, a:focus {
 } */
 /* Шапка */
 .header {
-  padding: 25px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 19px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 25px 0;
+  }
 }
 .header__container {
   display: flex;
@@ -1008,6 +1033,138 @@ a:hover, a:focus {
   color: #2196F3;
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 48px 40px;
+  transform: translateX(100%);
+  z-index: 10;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding-right: 15px;
+}
+.mobile-menu__close-btn:hover, .mobile-menu__close-btn:focus {
+  fill: #2196F3;
+}
+
+.mobile-menu__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-menu__nav-item:not(:last-child) {
+  padding-bottom: 32px;
+}
+
+.mobile-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-align: start;
+  text-transform: none;
+  text-decoration: none;
+  color: #212121;
+}
+
+.mobile-menu__link--current {
+  color: #2196F3;
+}
+
+.mobile-menu__contacts-list {
+  margin-bottom: 64px;
+}
+
+.mobile-menu__contacts-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__contacts-phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-align: start;
+  text-transform: none;
+  text-decoration: none;
+  color: #757575;
+}
+.mobile-menu__contacts-phone:hover, .mobile-menu__contacts-phone:focus {
+  color: #2196F3;
+}
+
+.mobile-menu__contacts-email {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  text-align: start;
+  text-transform: none;
+  text-decoration: none;
+  color: #757575;
+}
+.mobile-menu__contacts-email:hover, .mobile-menu__contacts-email:focus {
+  color: #2196F3;
+}
+
+.mobile-menu__socials-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.mobile-menu__socials-item {
+  padding: 0 10px;
+}
+.mobile-menu__socials-item:first-child {
+  padding-left: 0;
+}
+.mobile-menu__socials-item:last-child {
+  padding-right: 0;
+}
+.mobile-menu__socials-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-menu__socials-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-align: start;
+  text-transform: none;
+  text-decoration: none;
+  color: #2196F3;
+}
+
 /* Модальне вікно */
 .modal {
   position: absolute;
@@ -1019,7 +1176,7 @@ a:hover, a:focus {
   overflow: auto;
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Кнопка закриття модального вікна */
 }
 .modal__btn {
@@ -1039,23 +1196,40 @@ a:hover, a:focus {
   padding: 0;
   margin: 0;
 }
-.modal__btn:hover {
+.modal__btn:hover, .modal__btn:focus {
   fill: #2196F3;
 }
 
 /* Навігація */
 .nav {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   flex-grow: 1;
   gap: 93px;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav__btn {
+    display: none;
+  }
+}
 .nav__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
 }
 .nav__link {
   position: relative;
@@ -1068,6 +1242,11 @@ a:hover, a:focus {
   text-decoration: none;
   color: #212121;
   padding: 32px 0 32px;
+}
+@media screen and (min-width: 1200px) {
+  .nav__link {
+    padding: 32px 0 32px;
+  }
 }
 .nav__link:hover, .nav__link:focus, .nav__link--current {
   color: #2196F3;
@@ -1275,4 +1454,11 @@ a:hover, a:focus {
   text-decoration: none;
   color: #757575;
   margin-bottom: 16px;
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

@@ -1,9 +1,16 @@
 /* Шапка */
 
 .header {
-    padding: 25px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #ececec;
 
+    @include for-tablet-landscape-up {
+        padding: 19px 0;
+    }
+    
+    @include for-desktop-up {
+        padding: 25px 0;
+    }
     &__container {
         @include displayflex($justify-content: space-between);
     }

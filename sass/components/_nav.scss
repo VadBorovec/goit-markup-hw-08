@@ -1,13 +1,27 @@
 /* Навігація */
 
 .nav {
-    @include displayflex($justify-content: start);
+    @include displayflex($justify-content: space-between);
     flex-grow: 1;
     gap: 93px;
 
+    @include for-tablet-landscape-up {
+        @include displayflex($justify-content: start);
+    }
+
+    &__btn {
+        @include for-tablet-landscape-up {
+            display: none;
+        }
+    }
+
     &__list {
+        display: none;
+
+        @include for-tablet-landscape-up {
         @include displayflex();
         gap: 50px;
+        }
     }
 
     &__link {
@@ -15,8 +29,10 @@
         @include fontset($fw: 500, $fs: 14px, $lh: 1.14, $ls: 0.02em);
         color: getColor('title-text');
         padding: 32px 0 32px;
-        // transition: color $timing-function,
-        // background-color $timing-function;
+
+        @include for-desktop-up {
+        padding: 32px 0 32px;
+        }
 
         &:hover,
         &:focus,

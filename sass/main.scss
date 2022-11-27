@@ -22,9 +22,17 @@
 @import './components/header';
 @import './components/hero';
 @import './components/logo';
+@import './components/./mobile-menu';
 @import './components/modal';
 @import './components/nav';
 @import './components/socials';
 @import './components/solutions';
 @import './components/subscription';
 @import './components/team';
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+}
