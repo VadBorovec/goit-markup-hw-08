@@ -340,7 +340,12 @@ a:hover, a:focus {
 
 /* Секції */
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 .section--without-padding-top {
   padding-top: 0;
@@ -359,13 +364,12 @@ a:hover, a:focus {
 
 /* Контейнер */
 .container {
-  width: 100%;
-  margin: 0 auto;
   padding: 0 15px;
 }
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -375,7 +379,7 @@ a:hover, a:focus {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 120px;
+    max-width: 1200px;
   }
 }
 
@@ -935,16 +939,6 @@ a:hover, a:focus {
 }
 
 /* Герой */
-.hero {
-  max-width: 1600px;
-  height: 600px;
-  margin: 0 auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-image.jpg");
-  background-color: #2F303A;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 .hero__container {
   display: flex;
   justify-content: center;

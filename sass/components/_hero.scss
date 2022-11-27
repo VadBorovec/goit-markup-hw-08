@@ -1,14 +1,14 @@
 /* Герой */
 
 .hero {
-    max-width: 1600px;
-    height: 600px;
-    margin: 0 auto;
-    background-image: getColor('gradient'), url('../images/hero-bg-image.jpg');
-    background-color: getColor('dark-bcg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    // max-width: 1600px;
+    // height: 600px;
+    // margin: 0 auto;
+    // background-image: getColor('gradient'), url('../images/hero-bg-image.jpg');
+    // background-color: getColor('dark-bcg');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
 
     &__container {
         @include displayflex();

@@ -1,7 +1,11 @@
 /* Секції */
 
 .section {
+    padding: 60px 0;
+
+    @include for-desktop-up {
     padding: 94px 0;
+    }
 
     &--without-padding-top {
         padding-top: 0;
