@@ -14,6 +14,12 @@ $desktop: 1140px;
     }
 }
 
+@mixin for-phone-to-767 {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
 @mixin for-tablet-portrait-up {
     @media screen and (min-width: 480px) {
         @content;

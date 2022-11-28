@@ -317,7 +317,7 @@ a {
   text-decoration: none;
   font-style: normal;
   color: #212121;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 a:hover, a:focus {
   color: #2196F3;
@@ -413,7 +413,7 @@ a:hover, a:focus {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -442,7 +442,7 @@ a:hover, a:focus {
   margin: 0 auto;
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover, .btn:focus {
   background-color: #188CE8;
@@ -501,7 +501,7 @@ a:hover, a:focus {
   background-color: #2196F3;
   opacity: 0.9;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card:hover .card__overlay, .card:focus .card__overlay {
   transform: translateY(0);
@@ -632,12 +632,7 @@ a:hover, a:focus {
 }
 
 /* Секція Переваги */
-@media screen and (min-width: 481px) {
-  .features__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+@media screen and (min-width: 768px) {
   .features__list {
     display: flex;
     justify-content: center;
@@ -645,35 +640,51 @@ a:hover, a:focus {
     flex-wrap: wrap;
     gap: 30px;
   }
+}
+@media screen and (min-width: 768px) {
   .features__item {
-    width: 270px;
+    flex-basis: calc((100% - 30px) / 2);
   }
-  .features__icon-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 270px;
-    height: 120px;
-    background-color: #F5F4FA;
-    border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+@media screen and (max-width: 767px) {
+  .features__item:not(:last-child) {
     margin-bottom: 30px;
   }
+}
+.features__icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.features__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: start;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #212121;
+  margin: 0 auto 10px;
+}
+@media screen and (max-width: 767px) {
   .features__subtitle {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-align: start;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #212121;
-    margin: 0 auto 10px;
+    text-align: center;
   }
-  .features__text {
-    color: #757575;
-    line-height: 1.71;
-    margin: 0;
-  }
+}
+.features__text {
+  color: #757575;
+  line-height: 1.71;
 }
 
 /* Фільтри з Портфоліо */
@@ -703,7 +714,7 @@ a:hover, a:focus {
   border: none;
   border-radius: 4px;
   box-shadow: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -784,7 +795,7 @@ a:hover, a:focus {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  transition: border 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input:hover, .form__input:focus {
   border-color: #2196F3;
@@ -795,7 +806,7 @@ a:hover, a:focus {
   left: 12px;
   transform: translateY(-50%);
   fill: #212121;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input:hover + .form__icon, .form__input:focus + .form__icon {
   fill: #2196F3;
@@ -810,7 +821,7 @@ a:hover, a:focus {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__comment:hover, .form__comment:focus {
   fill: #2196F3;
@@ -865,7 +876,7 @@ a:hover, a:focus {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__btn:hover, .form__btn:focus {
   background-color: #188CE8;
@@ -888,7 +899,7 @@ a:hover, a:focus {
 .checkbox__icon {
   border: 2px solid #212121;
   border-radius: 2px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 2500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #FFFFFF;
 }
 .checkbox__input:checked + .checkbox__icon {
@@ -1002,7 +1013,7 @@ a:hover, a:focus {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1047,7 +1058,7 @@ a:hover, a:focus {
   padding: 48px 40px;
   transform: translateX(100%);
   z-index: 10;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -1063,7 +1074,7 @@ a:hover, a:focus {
   right: 15px;
   background: #ffffff;
   border: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 .mobile-menu__close-btn:hover, .mobile-menu__close-btn:focus {
@@ -1160,7 +1171,7 @@ a:hover, a:focus {
   overflow: auto;
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Кнопка закриття модального вікна */
 }
 .modal__btn {
@@ -1175,7 +1186,7 @@ a:hover, a:focus {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   padding: 0;
   margin: 0;
@@ -1198,6 +1209,19 @@ a:hover, a:focus {
     justify-content: start;
     align-items: center;
   }
+}
+.nav__btn {
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav__btn:hover, .nav__btn:focus {
+  fill: #2196F3;
 }
 @media screen and (min-width: 768px) {
   .nav__btn {
@@ -1388,7 +1412,7 @@ a:hover, a:focus {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscription-form__btn:hover, .subscription-form__btn:focus {
   background-color: #188CE8;

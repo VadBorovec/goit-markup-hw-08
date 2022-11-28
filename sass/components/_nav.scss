@@ -10,6 +10,20 @@
     }
 
     &__btn {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        right: 10px;
+        border: none;
+        background-color: getColor('primary-bcg');
+        cursor: pointer;
+        transition: fill $timing-function;
+
+        &:hover,
+        &:focus {
+            fill: getColor('accent');
+        }
+
         @include for-tablet-landscape-up {
             display: none;
         }
