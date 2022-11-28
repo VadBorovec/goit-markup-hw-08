@@ -6,7 +6,7 @@
 
     &__container {
         text-align: center;
-        margin-bottom: 60px;
+       
 
         @include for-tablet-landscape-up {
             @include displayflex($justify-content: space-between,

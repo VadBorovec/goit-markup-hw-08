@@ -1,17 +1,17 @@
 /* Підвал блок - адреса */
 
+
 .address {
+    margin-bottom: 60px;
 
     &__item:not(:last-child) {
-        margin-bottom: 9px;
+        margin-bottom: 12px;
     }
 
     &__link {
 
         @include fontset($fw: 400, $fs: 14px, $lh: 1.71);
         color: getColor('footer-address');
-        // transition: color $timing-function,
-        // background-color $timing-function;
 
         &--map {
             color: getColor('white-text');

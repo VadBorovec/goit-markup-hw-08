@@ -2,8 +2,12 @@
 
 .logo {
     font-family: "raleway", sans-serif;
-    @include fontset($fs: 26px, $lh: 1.19);
+    @include fontset($fs: 24px);
     color: getColor('accent');
+
+    @include for-desktop-up {
+        @include fontset ($fs: 26px, $lh: 1.19);
+    }
 
     &--primary {
             color: getColor('black-text');
