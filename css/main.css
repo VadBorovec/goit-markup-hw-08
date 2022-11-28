@@ -396,9 +396,6 @@ a:hover, a:focus {
 }
 
 /* Підвал блок - адреса */
-.address {
-  margin-bottom: 60px;
-}
 .address__item:not(:last-child) {
   margin-bottom: 12px;
 }
@@ -771,7 +768,13 @@ a:hover, a:focus {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 70px;
+    flex-wrap: wrap;
+    row-gap: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    flex-wrap: nowrap;
   }
 }
 .footer__logo {
@@ -783,11 +786,21 @@ a:hover, a:focus {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: start;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__caption {
+    text-align: start;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__address-wrap, .footer__join-wrap {
+    margin-bottom: 60px;
+  }
 }
 
 /*  *Форма модального вікна*  */
@@ -1389,22 +1402,34 @@ a:hover, a:focus {
 }
 
 /* Підвал блок - підписки */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .subscription-form {
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     gap: 12px;
   }
 }
 .subscription-form__input {
-  padding: 15px;
-  width: 358px;
+  width: 100%;
   color: #FFFFFF;
   background-color: #2F303A;
+  padding: 15px;
+  margin: 0 auto 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .subscription-form__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription-form__input {
+    width: 358px;
+    margin: 0 auto;
+  }
 }
 .subscription-form__input::-moz-placeholder {
   font-weight: 400;

@@ -2,19 +2,28 @@
 
 .subscription-form {
     
-    @include for-tablet-landscape-up {
-        @include displayflex($align-items: stretch);
+    @include for-desktop-up {
+        @include displayflex();
             gap: 12px;
     }
 
     &__input {
-        padding: 15px;
-        width: 358px;
+        width: 100%;
         color: getColor('white-text');
         background-color: getColor('dark-bcg');
+        padding: 15px;
+        margin: 0 auto 20px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: $box-shadow;
         border-radius: 4px;
+        
+        @include for-tablet-landscape-up {
+            width: 450px;
+        }
+        @include for-desktop-up {
+            width: 358px;
+            margin: 0 auto;
+        }
 
         &::placeholder {
             @include fontset($fw: 400, $lh: 1.25);

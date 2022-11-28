@@ -6,12 +6,16 @@
 
     &__container {
         text-align: center;
-       
 
         @include for-tablet-landscape-up {
             @include displayflex($justify-content: space-between,
                 $align-items: baseline);
-                gap: 70px;
+                flex-wrap: wrap;
+                row-gap: 60px;
+        }
+
+        @include for-desktop-up {
+            flex-wrap: nowrap;
         }
     }
 
@@ -21,8 +25,19 @@
     }
 
     &__caption {
-        @include fontset ($fs: 14px, $lh: 1.14, $transform: uppercase);
+        @include fontset ($fs: 14px, $lh: 1.14, $align: center, $transform: uppercase);
         color: getColor('white-text');
         margin-bottom: 20px;
+
+        @include for-desktop-up {
+            text-align: start;
+        }
+    }
+
+    &__address-wrap,
+    &__join-wrap {
+        @include for-phone-to-767 {
+            margin-bottom: 60px;
+        }
     }
 }
