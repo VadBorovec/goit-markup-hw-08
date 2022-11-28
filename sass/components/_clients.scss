@@ -13,6 +13,19 @@
         height: 92px;
     }
 
+    &__item {
+        height: 92px;
+        flex-basis: calc((100% - 30px) / 2);
+
+        @include for-tablet-landscape-up {
+            flex-basis: calc((100% - 60px) / 3);
+        }
+
+        @include for-desktop-up {
+            flex-basis: calc((100% - 150px) / 6);
+        }
+    }
+
     &__icon {
         fill: currentColor;
     }
