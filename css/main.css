@@ -1080,7 +1080,7 @@ a:hover, a:focus {
   justify-content: space-between;
 }
 
-.mobile-menu__nav-item:not(:last-child) {
+.mobile-menu__list:not(:last-child) {
   padding-bottom: 32px;
 }
 
