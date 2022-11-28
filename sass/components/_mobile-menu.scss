@@ -1,93 +1,4 @@
-// .mobile-menu {
-//     display: none;
-
-
-//     &.is-open {
-//         opacity: 1;
-//         visibility: visible;
-//         pointer-events: initial;
-//         transform: translateX(0);
-//     }
-// }
-
-// .mobile-menu__container {
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     padding: 48px 40px;
-//     display: flex;
-//     flex-direction: column;
-//     width: 100%;
-//     height: 100%;
-//     margin: 0 auto;
-//     background-color: getColor ('primary-bcg');
-
-//     @include for-tablet-portrait-up {
-//         width: 480px;
-//     }
-// }
-
-// .mobile-menu__btn-close {
-//     position: absolute;
-//     background-color: getColor ('primary-bcg');
-//     fill: #000;
-//     transition: fill $timing-function;
-//     cursor: pointer;
-//     top: 10px;
-//     right: 15px;
-//     width: 40px;
-//     height: 40px;
-//     border: none;
-
-//     &:hover {
-//         fill: getColor ('accent');
-//     }
-// }
-
-
-
-// .mobile-menu__link {
-//     display: block;
-//     @include fontset($fw: 500, $fs: 40px, $lh: 1.18, $ls: 0.02em);
-//     color: getColor ('title-text');
-//     transition: color $timing-function;
-
-//     &--current {
-//         color: getColor ('accent');
-//     }
-
-//     @include for-phone-only {
-//         font-size: 30px;
-//     }
-
-//     &:hover,
-//     &:focus {
-//         color: getColor ('accent');
-//     }
-// }
-
-// .mobile-menu__contacts-link-tel {
-//     @include fontset($fw: 500, $fs: 34px, $lh: 1.18, $ls: 0.02em);
-//     color: getColor ('accent');
-//     padding-bottom: 32px;
-
-//     @include for-phone-only {
-//         font-size: 26px;
-//     }
-// }
-
-// .mobile-menu__contacts-link-email {
-//     @include fontset($fw: 500, $fs: 24px, $lh: 1.7, $ls: 0.02em);
-//     color: getColor ('primary-text'); 
-//     padding-bottom: 64px;
-
-//     @include for-phone-only {
-//         font-size: 18px;
-//     }
-// }
-
-
+// Мобільне меню
 
 .mobile-menu {
     position: fixed;
@@ -95,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    @include displayflex ($justify-content: space-between);
+    @include displayflex ($justify-content: space-between, $align-items: start);
     flex-direction: column;
     background-color: getColor('primary-bcg');
     padding: 48px 40px;
@@ -111,112 +22,117 @@
 
     &.is-open {
         transform: translateX(0);
+//         opacity: 1;
+//         visibility: visible;
+//         pointer-events: initial;
     }
-}
 
-.mobile-menu__close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 30px;
-    height: 30px;
-    background: getColor('primary-bcg');
-    border: none;
-    transition: fill $timing-function;
-    cursor: pointer;
-    padding-right: 15px;
+    // мобільне меню - кнопка закриття
 
-    &:hover,
-    &:focus  {
-        fill: getColor('accent');
+    &__close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        // width: 40px;
+        // height: 40px;
+        background: getColor('primary-bcg');
+        border: none;
+        transition: fill $timing-function;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            fill: getColor('accent');
+        }
     }
-}
-
-.mobile-menu__wrap {
-    display: flex;
+    
+    // Мобільне меню - навігація
+    
+    &__list {
+        @include displayflex ($align-items: start);
         flex-direction: column;
-        justify-content: space-between;
-}
+        gap: 32px;
+    }
+    
+    &__link {
+        @include fontset ($fw: 500,
+            $fs: 40px,
+            $lh: 1.18,
+            $ls: 0.02em);
+        color: getColor('title-text');
 
-.mobile-menu__list:not(:last-child) {
-    padding-bottom: 32px;
-}
+        &--current {
+            color: getColor('accent');
+        }
+    }
+    
+    // Мобільне меню - контакти
 
-.mobile-menu__link {
-    @include fontset ($fw: 500,
-        $fs: 40px,
-        $lh: 1.18,
-        $ls: 0.02em);
-    color: getColor('title-text');
-}
+    &__contacts-list {
+        margin-bottom: 64px;
+    }
 
-.mobile-menu__link--current {
-    color: getColor('accent');
-}
-
-
-
-.mobile-menu__contacts-list {
-    margin-bottom: 64px;
-}
-
-.mobile-menu__contacts-item:not(:last-child) {
-    margin-bottom: 32px;
-}
-
-.mobile-menu__contacts-phone {
-    @include fontset ($fw: 500,
-        $fs: 34px,
-        $lh: 1.18,
-        $ls: 0.02em);
+    &__contacts-item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    
+    &__contacts-phone {
+        @include fontset ($fw: 500,
+            $fs: 34px,
+            $lh: 1.18,
+            $ls: 0.02em);
         color: getColor('primary-text');
-        
-        &:hover,
-        &:focus {
-            color: getColor('accent');
-        }
-}
-
-.mobile-menu__contacts-email {
-    @include fontset($fw: 500,
-        $fs: 24px,
-        $lh: 1.7,
-        $ls: 0.02em);
-    color: getColor('primary-text');
 
         &:hover,
         &:focus {
             color: getColor('accent');
         }
-}
+    }
+    
+    &__contacts-email {
+        @include fontset($fw: 500,
+            $fs: 24px,
+            $lh: 1.7,
+            $ls: 0.02em);
+        color: getColor('primary-text');
 
-.mobile-menu__socials-list {
-    @include displayflex ($justify-content:start)
-}
+        &:hover,
+        &:focus {
+            color: getColor('accent');
+        }
+    }
+    
+    // Мобільне меню - соціальні мережі
 
-.mobile-menu__socials-item {
-    padding: 0 10px;
-
-    &:first-child {
-        padding-left: 0;
+    &__socials-list {
+        @include displayflex ($justify-content: start)
     }
 
-    &:last-child {
-        padding-right: 0;
+    &__socials-item {
+        padding: 0 10px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
     }
 
-    &:not(:last-child) {
-        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    &__socials-link {
+        @include fontset ($fw: 500,
+            $fs: 18px,
+            $lh: 1.22,
+            $ls: 0.02em,
+            $align: start,
+            $transform: none,
+            $decoration: none);
+        color: getColor('accent');
     }
 }
 
-.mobile-menu__socials-link {
-    @include fontset ($fw: 500,
-        $fs: 18px,
-        $lh: 1.22,
-        $ls: 0.02em,
-        $align: start,
-        $transform: none,
-        $decoration: none);
-    color: getColor('accent');
-}
