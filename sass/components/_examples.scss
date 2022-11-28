@@ -1,11 +1,30 @@
 /* Приклади робіт */
 
 .examples {
-    @include displayflex($justify-content: space-evenly);
-    flex-wrap: wrap;
-    gap: 30px;
-
-    &__item {
-        width: 370px;
+    @include for-tablet-landscape-up {
+        @include displayflex($justify-content: start, $align-items: start);
+        flex-wrap: wrap;
+        gap: 30px;
     }
-}
+        
+        &__item {
+
+            @include for-phone-to-767 {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            @include for-tablet-portrait-up {
+                width: 450px;
+            }
+
+            @include for-tablet-landscape-up {
+                flex-basis: calc((100% - 30px) / 2);
+            }
+
+            @include for-desktop-up {
+                flex-basis: calc((100% - 60px) / 3);
+            }
+        }
+    }
