@@ -33,7 +33,7 @@ $desktop: 1140px;
 }
 
 @mixin for-tablet-to {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1200px) {
         @content;
     }
 }

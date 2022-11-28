@@ -12,8 +12,13 @@
     }
 
     &__title {
-        @include fontset($fs: 36px, $ls: 0.03em, $align: center);
+        @include fontset($fs: 28px, $lh: 1.18, $align: center);
         color: getColor('title-text');
-        margin: 0 auto 50px;
+        margin: 0 auto 30px;
+
+        @include for-desktop-up {
+            @include fontset($fs: 36px, $align: center); 
+            margin: 0 auto 50px;
+        }
     }
 }

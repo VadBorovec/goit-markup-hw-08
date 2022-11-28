@@ -3,20 +3,35 @@
 .team {
     background-color: getColor('secondary-bcg');
 
-    &__list {
-        @include displayflex();
-        flex-wrap: wrap;
-        gap: 30px;
 
+    &__list {
+        @include for-tablet-landscape-up {
+            @include displayflex();
+            flex-wrap: wrap;
+            gap: 30px;
+        }
     }
 
     &__item {
         background-color: getColor('primary-bcg');
-        width: 270px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
                     0px 1px 1px rgba(0, 0, 0, 0.14),
                     0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
+
+        @include for-phone-to-767 {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+        
+        @include for-tablet-landscape-up {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+    
+        @include for-desktop-up {
+            flex-basis: calc((100% - 90px) / 4);
+        }
     }
 
     &__description {
