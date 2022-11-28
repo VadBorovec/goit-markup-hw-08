@@ -2,6 +2,10 @@
 
 .solutions {
 
+    @include for-tablet-to {
+        display: none;
+    }
+
     &__list {
         @include displayflex();
         flex-wrap: wrap;

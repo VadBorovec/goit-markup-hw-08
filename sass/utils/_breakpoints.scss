@@ -32,8 +32,15 @@ $desktop: 1140px;
     }
 }
 
+@mixin for-tablet-to {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
 @mixin for-desktop-up {
     @media screen and (min-width: 1200px) {
         @content;
     }
 }
+

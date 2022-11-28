@@ -1307,6 +1307,11 @@ a:hover, a:focus {
 }
 
 /* Секція Рішення */
+@media screen and (max-width: 1199px) {
+  .solutions {
+    display: none;
+  }
+}
 .solutions__list {
   display: flex;
   justify-content: center;
