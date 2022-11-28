@@ -716,10 +716,25 @@ a:hover, a:focus {
 /* Фільтри з Портфоліо */
 .filters {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  row-gap: 15px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters {
+    margin-bottom: 50px;
+  }
 }
 .filters__btn {
   width: inherit;
@@ -766,7 +781,7 @@ a:hover, a:focus {
 @media screen and (min-width: 768px) {
   .footer__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
     flex-wrap: wrap;
     row-gap: 60px;
@@ -774,6 +789,7 @@ a:hover, a:focus {
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
+    justify-content: space-between;
     flex-wrap: nowrap;
   }
 }
@@ -1125,6 +1141,9 @@ a:hover, a:focus {
 }
 .mobile-menu.is-open {
   transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
 }
 .mobile-menu__close-btn {
   position: absolute;
@@ -1216,6 +1235,11 @@ a:hover, a:focus {
   text-transform: none;
   text-decoration: none;
   color: #2196F3;
+}
+@media screen and (max-width: 479px) {
+  .mobile-menu__socials-link {
+    font-size: 14px;
+  }
 }
 
 /* Модальне вікно */

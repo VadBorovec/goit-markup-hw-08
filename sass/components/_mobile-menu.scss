@@ -22,9 +22,9 @@
 
     &.is-open {
         transform: translateX(0);
-//         opacity: 1;
-//         visibility: visible;
-//         pointer-events: initial;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
     }
 
     // мобільне меню - кнопка закриття
@@ -133,6 +133,10 @@
             $transform: none,
             $decoration: none);
         color: getColor('accent');
+
+        @include for-phone-only {
+            font-size: 14px;
+        }
     }
 }
 
