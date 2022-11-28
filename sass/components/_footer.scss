@@ -5,9 +5,14 @@
     padding: 60px 0;
 
     &__container {
-        @include displayflex($justify-content: space-between,
-                        $align-items: baseline);
-        gap: 70px;
+        text-align: center;
+        margin-bottom: 60px;
+
+        @include for-tablet-landscape-up {
+            @include displayflex($justify-content: space-between,
+                $align-items: baseline);
+                gap: 70px;
+        }
     }
 
     &__logo {

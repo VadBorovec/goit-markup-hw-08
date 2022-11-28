@@ -1,8 +1,11 @@
 /* Підвал блок - підписки */
 
 .subscription-form {
-    @include displayflex($align-items: stretch);
-    gap: 12px;
+    
+    @include for-tablet-landscape-up {
+        @include displayflex($align-items: stretch);
+            gap: 12px;
+    }
 
     &__input {
         padding: 15px;
