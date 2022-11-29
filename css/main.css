@@ -842,6 +842,11 @@ a:hover, a:focus {
     margin-bottom: 60px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__address-wrap {
+    text-align: start;
+  }
+}
 
 /*  *Форма модального вікна*  */
 .form {

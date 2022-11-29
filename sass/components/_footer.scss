@@ -41,4 +41,10 @@
             margin-bottom: 60px;
         }
     }
+
+    &__address-wrap {
+        @include for-desktop-up {
+            text-align: start;
+        }
+    }
 }

@@ -131,18 +131,21 @@
         <h2 class="section__title">Чим ми займаємося</h2>
         <ul class="solutions__list">
           <li class="solutions__item">
-            <img src="./images/desktop_adds.jpg"
+            <img srcset="./images/desktop_adds@1x.jpg 1x, ./images/desktop_adds@2x.jpg 2x"
+              src="./images/desktop_adds@1x.jpg"
               alt="Хлопець набирає код на клавіатурі, поруч на столі лежить асоціативна карта" width="370"
               title="Десктопні додатки" />
             <h3 class="solutions__subtitle">Десктопні додатки</h3>
           </li>
           <li class="solutions__item">
-            <img src="./images/mobile_adds.jpg" alt="Дівчина в лівій руці тримає телефон, правою працює на ноутбуці"
+            <img srcset="./images/mobile_adds@1x.jpg 1x, ./images/mobile_adds@2x.jpg 2x"
+              src="./images/mobile_adds@1x.jpg" alt="Дівчина в лівій руці тримає телефон, правою працює на ноутбуці"
               width="370" title="Мобільні додатки" />
             <h3 class="solutions__subtitle">Мобільні додатки</h3>
           </li>
           <li class="solutions__item">
-            <img src="./images/design_solutions.jpg"
+            <img srcset="./images/design_solutions@1x.jpg 1x, ./images/design_solutions@2x.jpg 2x"
+              src="./images/design_solutions@1x.jpg"
               alt="Дизайнер тримає в руці планшет та перо, на планшеті зображена кольоровий гексагон" width="370"
               title="Дизайнерські рішення" />
             <h3 class="solutions__subtitle">Дизайнерські рішення</h3>
@@ -156,8 +159,24 @@
         <h2 class="section__title">Наша команда</h2>
         <ul class="team__list">
           <li class="team__item">
-            <img src="./images/igor.jpg" alt="Хлопець в бордвій сорочці та окулярах посміхається"
-              title="Ігор Дем'яненко" />
+            <picture>
+              <source srcset="
+                                ./images/igor-desktop@1x.jpg 1x,
+                                ./images/igor-desktop@2x.jpg 2x
+                              " media="(min-width: 1200px)" />
+
+              <source srcset="
+                                ./images/igor-tablet@1x.jpg 1x,
+                                ./images/igor-tablet@2x.jpg 2x
+                              " media="(min-width: 768px)" />
+
+              <source srcset="
+                                ./images/igor-mobile@1x.jpg 1x,
+                                ./images/igor-mobile@2x.jpg 2x
+                              " media="(max-width: 767px)" />
+              <img src="./images/igor-mobile@1x.jpg" alt="Хлопець в бордвій сорочці та окулярах посміхається"
+                title="Ігор Дем'яненко" />
+            </picture>
             <div class="team__description">
               <h3 class="team__subtitle">Ігор Дем'яненко</h3>
               <p class="team__text">Product Designer</p>
@@ -202,7 +221,24 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/olha.jpg" alt="Дівчина в чорому піджаку та окулярах посміхається" title="Ольга Рєпіна" />
+            <picture>
+              <source srcset="
+                                ./images/olga-desktop@1x.jpg 1x,
+                                ./images/olga-desktop@2x.jpg 2x
+                              " media="(min-width: 1200px)" />
+
+              <source srcset="
+                                ./images/olga-tablet@1x.jpg 1x,
+                                ./images/olga-tablet@2x.jpg 2x
+                              " media="(min-width: 768px)" />
+
+              <source srcset="
+                                ./images/olga-mobile@1x.jpg 1x,
+                                ./images/olga-mobile@2x.jpg 2x
+                              " media="(max-width: 767px)" />
+              <img src="./images/olga-mobile@1x.jpg" alt="Дівчина в чорому піджаку та окулярах посміхається"
+                title="Ольга Рєпіна" />
+            </picture>
             <div class="team__description">
               <h3 class="team__subtitle">Ольга Рєпіна</h3>
               <p class="team__text">Frontend Developer</p>
@@ -246,7 +282,24 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/mykola.jpg" alt="Хлопець в блакитній сорочці посміхається" title="Микола Тарасов" />
+            <picture>
+              <source srcset="
+                                ./images/mykola-desktop@1x.jpg 1x,
+                                ./images/mykola-desktop@2x.jpg 2x
+                              " media="(min-width: 1200px)" />
+
+              <source srcset="
+                                ./images/mykola-tablet@1x.jpg 1x,
+                                ./images/mykola-tablet@2x.jpg 2x
+                              " media="(min-width: 768px)" />
+
+              <source srcset="
+                                ./images/mykola-mobile@1x.jpg 1x,
+                                ./images/mykola-mobile@2x.jpg 2x
+                              " media="(max-width: 767px)" />
+              <img src="./images/mykola-mobile@1x.jpg" alt="Хлопець в блакитній сорочці посміхається"
+                title="Микола Тарасов" />
+            </picture>
             <div class="team__description">
               <h3 class="team__subtitle">Микола Тарасов</h3>
               <p class="team__text">Marketing</p>
@@ -289,8 +342,24 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/mykhaylo.jpg" alt="Хлопець в чорній футболці т окулярах дивиться в об'єктив"
-              title="Михайло Єрмаков" />
+            <picture>
+              <source srcset="
+                                ./images/mykhailo-desktop@1x.jpg 1x,
+                                ./images/mykhailo-desktop@2x.jpg 2x
+                              " media="(min-width: 1200px)" />
+
+              <source srcset="
+                                ./images/mykhailo-tablet@1x.jpg 1x,
+                                ./images/mykhailo-tablet@2x.jpg 2x
+                              " media="(min-width: 768px)" />
+
+              <source srcset="
+                                ./images/mykhailo-mobile@1x.jpg 1x,
+                                ./images/mykhailo-mobile@2x.jpg 2x
+                              " media="(max-width: 767px)" />
+              <img src="./images/mykhailo-mobile@1x.jpg" alt="Хлопець в чорній футболці т окулярах дивиться в об'єктив"
+                title="Михайло Єрмаков" />
+            </picture>
             <div class="team__description">
               <h3 class="team__subtitle">Михайло Єрмаков</h3>
               <p class="team__text">UI Designer</p>
