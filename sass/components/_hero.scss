@@ -1,14 +1,47 @@
 /* Герой */
 
 .hero {
-    // max-width: 1600px;
-    // height: 600px;
-    // margin: 0 auto;
-    // background-image: getColor('gradient'), url('../images/hero-bg-image.jpg');
-    // background-color: getColor('dark-bcg');
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: getColor('dark-bcg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include for-phone-to-767 {
+        background-image: getColor('gradient'), url(../images/hero-img@1x.jpg);
+    }
+  
+    @media screen and (max-width: 767px),
+    screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and(min-resolution: 2dppx) {
+        background-image: getColor('gradient'), url(../images/hero-img@2x.jpg);
+    }
+
+    @include for-tablet-landscape-up {
+        background-image: getColor('gradient'), url(../images/hero-tablet-img@1x.jpg);
+    }
+    
+    @media screen and (min-width: 768px),
+    screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and(min-resolution: 2dppx) {
+        background-image: getColor('gradient'), url(../images/hero-tablet-img@2x.jpg);
+    }
+
+    @include for-desktop-up {
+        background-image: getColor('gradient'), url(../images/hero-desktop-img@1x.jpg);
+        height: 600px;
+    }
+
+    @media screen and (min-width: 1200px),
+    screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and(min-resolution: 2dppx) {
+        background-image: getColor('gradient'), url(../images/hero-desktop-img@2x.jpg);
+    }
 
     &__container {
         @include displayflex();
@@ -17,11 +50,23 @@
     }
 
     &__title {
-        @include fontset($fw: 900,$fs: 44px, $lh: 1.36, $ls: 0.06em,
-                        $transform: uppercase, $align: center);
+        @include fontset($fw: 900, $fs: 26px, $lh: 1.61, $ls: 0.06em,
+            $transform: uppercase,
+            $align: center);
         color: getColor('white-text');
-        max-width: 696px;
         margin: 0 auto 30px;
+
+        @include for-tablet-landscape-up {
+            width: 360px;
+        }
+
+        @include for-desktop-up {
+            @include fontset($fw: 900, $fs: 44px, $lh: 1.36, $ls: 0.06em,
+                $transform: uppercase,
+                $align: center);
+            width: 696px;
+        }
+
     }
 
     &__btn {

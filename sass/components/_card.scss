@@ -1,6 +1,10 @@
 /* Картка з портфоліо */
  
 .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     @include fontset($fw: 500, $fs: 16px, $lh: 1.14, $ls: 0.02em);
     // color: getColor('title-text');
     // transition: color $timing-function, background-color $timing-function;
@@ -46,6 +50,7 @@
     }
 
     &__description {
+        flex-grow: 1;
         padding: 20px 24px;
         border: 1px solid #EEEEEE;
         border-top: 0;
