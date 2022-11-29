@@ -4,15 +4,21 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 528px;
+    width: calc(100% - 30px);
+    max-width: 450px;
     border-radius: 4px;
     background-color: getColor('primary-bcg');
-    overflow: auto;
     padding: 40px;
+    overflow: auto;
     transform: translate(-50%, -50%) scale(1);
     transition: transform $timing-function,
                 opacity $timing-function,
                 visibility $timing-function;
+
+    @include for-desktop-up {
+        max-width: 528px;
+        padding: 40px;
+    }
 
     /* Кнопка закриття модального вікна */
 
