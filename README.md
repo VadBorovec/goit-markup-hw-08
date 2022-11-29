@@ -1,3 +1,3 @@
-# goit-markup-hw-07
+# goit-markup-hw-08
 
-homework - module 7
+homework - module 8
