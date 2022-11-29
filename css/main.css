@@ -853,13 +853,18 @@ a:hover, a:focus {
 .form__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
   text-transform: none;
   text-decoration: none;
   color: #212121;
   margin-bottom: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .form__title {
+    line-height: 1.15;
+  }
 }
 .form__label {
   display: block;
@@ -999,23 +1004,35 @@ a:hover, a:focus {
   align-items: center;
   gap: 7px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.67;
   letter-spacing: 0.03em;
   text-align: start;
   text-transform: none;
   text-decoration: none;
   color: #757575;
 }
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .checkbox__link {
   color: #2196F3;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.67;
   letter-spacing: 0.03em;
   text-align: start;
   text-transform: none;
   text-decoration: underline;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 /* .checkbox-label::before {

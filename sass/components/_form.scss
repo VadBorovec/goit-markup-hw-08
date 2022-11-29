@@ -5,9 +5,13 @@
     flex-direction: column;
 
     &__title {
-        @include fontset($fs: 20px, $lh: 1.15, $align: center);
+        @include fontset($fs: 20px, $lh: 1.5, $align: center);
         color: getColor('title-text');
         margin-bottom: 12px;
+
+        @include for-desktop-up {
+            line-height: 1.15;
+        }
     }
 
     &__label {
@@ -114,13 +118,23 @@
     &__label {
         @include displayflex();
         gap: 7px;
-        @include fontset($fw: 400, $fs: 14px, $lh: 1.71);
+        @include fontset($fw: 400, $fs: 12px, $lh: 1.67);
         color: getColor('primary-text');
+
+        @include for-desktop-up {
+            font-size: 14px;
+            line-height: 1.71;
+        }
     }
 
     &__link {
         color: getColor('accent');
-        @include fontset ($fw: 400, $fs: 14px, $lh: 1.71, $decoration: underline);
+        @include fontset ($fw: 400, $fs: 12px, $lh: 1.67, $decoration: underline);
+
+        @include for-desktop-up {
+            font-size: 14px;
+            line-height: 1.71;
+        }
     }
 }
 
