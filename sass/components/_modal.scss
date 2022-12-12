@@ -15,6 +15,11 @@
                 opacity $timing-function,
                 visibility $timing-function;
 
+    @include for-tablet-portrait-up {
+        top: 30px;
+        transform: translate(-50%, 30px) scale(1);
+    }
+
     @include for-desktop-up {
         max-width: 528px;
         padding: 40px;

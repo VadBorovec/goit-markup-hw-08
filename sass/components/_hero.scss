@@ -2,8 +2,8 @@
 
 .hero {
     max-width: 1600px;
-    height: 600px;
     margin: 0 auto;
+    padding: 118px 0;
     background-color: getColor('dark-bcg');
     background-repeat: no-repeat;
     background-position: center;
@@ -34,6 +34,7 @@
     @include for-desktop-up {
         background-image: getColor('gradient'), url(../images/hero-desktop-img@1x.jpg);
         height: 600px;
+        padding: 200px 0;
     }
 
     @media screen and (min-width: 1200px),
@@ -46,7 +47,6 @@
     &__container {
         @include displayflex();
         flex-direction: column;
-        padding: 200px 0;
     }
 
     &__title {
