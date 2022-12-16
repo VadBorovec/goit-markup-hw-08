@@ -8,10 +8,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
-    @include for-phone-to-767 {
-        background-image: getColor('gradient'), url(../images/hero-img@1x.jpg);
-    }
   
     @media screen and (max-width: 767px),
     screen and (min-device-pixel-ratio: 2),
@@ -20,8 +16,8 @@
         background-image: getColor('gradient'), url(../images/hero-img@2x.jpg);
     }
 
-    @include for-tablet-landscape-up {
-        background-image: getColor('gradient'), url(../images/hero-tablet-img@1x.jpg);
+    @include for-phone-to-767 {
+        background-image: getColor('gradient'), url(../images/hero-img@1x.jpg);
     }
     
     @media screen and (min-width: 768px),
@@ -31,10 +27,8 @@
         background-image: getColor('gradient'), url(../images/hero-tablet-img@2x.jpg);
     }
 
-    @include for-desktop-up {
-        background-image: getColor('gradient'), url(../images/hero-desktop-img@1x.jpg);
-        height: 600px;
-        padding: 200px 0;
+    @include for-tablet-landscape-up {
+        background-image: getColor('gradient'), url(../images/hero-tablet-img@1x.jpg);
     }
 
     @media screen and (min-width: 1200px),
@@ -42,6 +36,12 @@
     screen and (min-resolution: 192dpi),
     screen and(min-resolution: 2dppx) {
         background-image: getColor('gradient'), url(../images/hero-desktop-img@2x.jpg);
+    }
+
+    @include for-desktop-up {
+        background-image: getColor('gradient'), url(../images/hero-desktop-img@1x.jpg);
+        height: 600px;
+        padding: 200px 0;
     }
 
     &__container {
